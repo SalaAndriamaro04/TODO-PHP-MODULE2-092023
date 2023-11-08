@@ -1,13 +1,10 @@
 <?php
 include('config/app.php');
+include('config/bd.php');
+include('connexion.php');
 include('html/header.php');
 include('fct/item.php');
 include('fct/request.php');
-
-//--Vérification de l'existence de nom du fichier
-if(!file_exists(FILE_NAME)) {
-  file_put_contents(FILE_NAME, serialize([]));
-}
 
 ?>
 
@@ -32,13 +29,13 @@ if(!file_exists(FILE_NAME)) {
             
             <!-- /. Code php pour afficher la TODO list  -->  
               <?php
-                $items = getItems();
-                //--
-                //Réferencé par la key
-                foreach ($items as $key => $item){
-                    echo displayItem($key, $item);
-                  
-                }
+              #TODO à modifier utilisant SELECT
+              $query='SELECT * FROM todo';
+              $stmt=$pdo->query($query);
+              while($item = $stmt->fetch(PDO::FETCH_ASSOC)){
+                echo displayItem($item);
+              } 
+              
               ?>
                 </ul>
               </div>
