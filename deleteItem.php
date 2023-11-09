@@ -6,7 +6,6 @@ include('config/bd.php');
 include('connexion.php');
 
 //Récupère les TODO list existant
-#TODO à supprimer
 //Récupère l'id sur le lien de méthode GET
     $id= get('item');
 

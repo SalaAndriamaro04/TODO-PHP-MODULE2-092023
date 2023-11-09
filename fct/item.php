@@ -51,16 +51,4 @@
       return $html;
   }
 
-#TODO à supprimer  
-//--Récupération items
-function getItems(){
-    return unserialize(file_get_contents(FILE_NAME));
-}
-
-#TODO à supprimer
-//--Enregistrement modification de checkbox des items
-function saveItems($items){
-file_put_contents(FILE_NAME, serialize($items));
-}
-
 ?>

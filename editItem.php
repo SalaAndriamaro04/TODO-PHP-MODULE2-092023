@@ -5,7 +5,6 @@ include('fct/request.php');
 include('config/bd.php');
 include('connexion.php');
 
-#TODO à supprimer
 
     //Récupération valeur editItem portant le key de la valeur à modifier
     $id= post('editItem');

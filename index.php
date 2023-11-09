@@ -29,7 +29,6 @@ include('fct/request.php');
             
             <!-- /. Code php pour afficher la TODO list  -->  
               <?php
-              #TODO à modifier utilisant SELECT
               $query='SELECT * FROM todo';
               $stmt=$pdo->query($query);
               while($item = $stmt->fetch(PDO::FETCH_ASSOC)){

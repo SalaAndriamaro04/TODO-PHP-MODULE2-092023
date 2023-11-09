@@ -5,7 +5,6 @@ include('fct/request.php');
 include('config/bd.php');
 include('connexion.php');
 
-#TODO à supprimer
     $id= get('item');
 
     $query='UPDATE todo SET checked=1-checked WHERE id=:id';
